@@ -1,0 +1,9 @@
+@import "./fonts.css";
+
+@theme default {
+  --color-background-base: #100210;
+  --color-background-dark: #0e030e;
+  --color-text-default: #ffffff;
+
+  --font-sans: "AfacadFlux", sans-serif;
+}

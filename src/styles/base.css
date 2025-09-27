@@ -1,0 +1,5 @@
+@layer base {
+  body {
+    @apply min-h-svh w-svw overflow-x-hidden overflow-y-auto bg-gradient-to-br from-background-base to-background-dark text-text-default font-sans;
+  }
+}
