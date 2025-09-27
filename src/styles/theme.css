@@ -1,9 +1,15 @@
 @import "./fonts.css";
 
 @theme default {
+  /* Colors */
   --color-background-base: #100210;
   --color-background-dark: #0e030e;
   --color-text-default: #ffffff;
+  --color-primary: #ff3f6b;
+  --color-border: #cb4a6839;
+  --color-card: #11040d;
+  --color-muted: #c3c3c3;
 
+  /* Fonts */
   --font-sans: "AfacadFlux", sans-serif;
 }
