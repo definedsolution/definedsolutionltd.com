@@ -1,5 +1,10 @@
 ---
 import "@/styles/global.css";
+
+const {
+  title = "Defined Solution Limited",
+  description = "Defined Solution Limited is a software development company specializing in web and mobile applications.",
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -7,8 +12,9 @@ import "@/styles/global.css";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/favicon.svg" />
-    <title>Document</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <slot />

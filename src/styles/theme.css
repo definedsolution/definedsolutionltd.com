@@ -3,10 +3,10 @@
 @theme default {
   /* Colors */
   --color-background-base: #100210;
-  --color-background-dark: #0e030e;
+  --color-background-dark: #020202;
   --color-text-default: #ffffff;
   --color-primary: #ff3f6b;
-  --color-border: #cb4a6839;
+  --color-primary-muted: #cb4a6860;
   --color-card: #11040d;
   --color-muted: #c3c3c3;
 
