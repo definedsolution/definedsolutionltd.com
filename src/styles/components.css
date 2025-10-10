@@ -1,3 +1,7 @@
 .card {
-  @apply rounded-lg p-2 border-2 border-primary-muted;
+  @apply rounded-lg p-2 border border-primary-muted;
+}
+
+.full-card {
+  @apply rounded-lg border border-primary-muted min-h-[calc(100vh-var(--spacing)*4*2)];
 }

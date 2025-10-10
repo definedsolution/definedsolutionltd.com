@@ -1,9 +1,26 @@
 ---
+import Hero from "@/_components/hero.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <div class="card m-2">
-    <h1>Hello World!</h1>
-  </div>
+  <!-- Hero Section -->
+  <Hero>
+    <div
+      class="absolute bottom-2 left-2 md:bottom-5 md:left-5 xl:bottom-10 xl:left-10"
+    >
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 md:mb-4 uppercase"
+      >
+        Unlock Your <br />
+        Brand's <strong>Potential</strong>
+        <br />
+        with Our <strong>Unique Approach</strong>.
+      </h1>
+      <p class="text-base md:text-lg xl:text-xl md:font-bold">
+        Defined Solution Limited is a 360 agency. Helping businesses develop
+        experiences and empower growth.
+      </p>
+    </div>
+  </Hero>
 </MainLayout>
