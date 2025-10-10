@@ -1,3 +1,7 @@
+.default-background {
+  @apply bg-gradient-to-br from-background-base to-background-dark;
+}
+
 .card {
   @apply rounded-lg p-2 border border-primary-muted;
 }
