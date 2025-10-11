@@ -3,6 +3,7 @@ import "@/styles/global.css";
 
 // Components
 import Footer from "@/_components/footer.astro";
+import Rays from "@/_components/rays.astro";
 
 const {
   title = "Defined Solution Limited",
@@ -24,6 +25,7 @@ const {
     <section
       class="fixed top-0 left-0 w-full h-screen -z-30 default-background"
     >
+      <Rays />
     </section>
     <!-- Smooth Scroll Wrapper -->
     <div id="smooth-scroll-content" class="min-h-screen">
@@ -42,13 +44,13 @@ const {
 
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  window.onload = () => {
-    // create the scrollSmoother before your scrollTriggers
+  document.addEventListener("DOMContentLoaded", () => {
+    // creates the scrollSmoother
     ScrollSmoother.create({
       content: "#smooth-scroll-content",
       smooth: 2,
       effects: true,
       normalizeScroll: true,
     });
-  };
+  });
 </script>

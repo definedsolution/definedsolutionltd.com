@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-@layer theme, base, components, utilities;
+@layer theme, base, components, utilities, rays;
 
 @import "./theme.css" layer(theme);
 @import "./base.css" layer(base);
 @import "./components.css" layer(components);
+@import "./rays.css" layer(rays);
 @import "./utilities.css" layer(utilities);
