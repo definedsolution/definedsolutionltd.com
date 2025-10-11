@@ -25,7 +25,30 @@ const {
       class="fixed top-0 left-0 w-full h-screen -z-30 default-background"
     >
     </section>
-    <slot />
-    <Footer />
+    <!-- Smooth Scroll Wrapper -->
+    <div id="smooth-scroll-content" class="min-h-screen">
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
+
+<script>
+  // GSAP Plugins
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  // ScrollSmoother requires ScrollTrigger
+  import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  window.onload = () => {
+    // create the scrollSmoother before your scrollTriggers
+    ScrollSmoother.create({
+      content: "#smooth-scroll-content",
+      smooth: 2,
+      effects: true,
+      normalizeScroll: true,
+    });
+  };
+</script>
