@@ -1,6 +1,9 @@
 ---
 import "@/styles/global.css";
 
+// Components
+import Footer from "@/_components/footer.astro";
+
 const {
   title = "Defined Solution Limited",
   description = "Defined Solution Limited is a software development company specializing in web and mobile applications.",
@@ -23,5 +26,6 @@ const {
     >
     </section>
     <slot />
+    <Footer />
   </body>
 </html>
