@@ -1,43 +1,70 @@
-# Astro Starter Kit: Minimal
+# Defined Solution Limited
+
+This repository contains the official website and related resources for Defined Solution Limited. Our mission is to provide innovative solutions and services to help businesses thrive in the digital age.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Installation
+
+To get started with the Defined Solution Limited website, follow these steps:
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/definedsolution/definedsolutionltd.com.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd definedsolutionltd.com
+   ```
+
+3. Install the dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```sh
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:4321` to see the website in action.
+
+## Usage
+
+To build and deploy the website, use the following command:
 
 ```sh
-npm create astro@latest -- --template minimal
+npm run build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This will generate the production-ready files in the `dist` directory.
 
-## 🚀 Project Structure
+## Contributing
 
-Inside of your Astro project, you'll see the following folders and files:
+We welcome contributions from the community! To contribute, please follow these steps:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Open a pull request to the main repository.
+   Please ensure that your code adheres to our coding standards and includes appropriate tests.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## License
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Contact
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For inquiries, please reach out to us at [hello@definedsolution.com](mailto:hello@definedsolution.com).
