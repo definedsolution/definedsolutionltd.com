@@ -53,15 +53,13 @@ const featuredCustomers = [
     <div
       class="absolute bottom-2 left-2 md:bottom-5 md:left-5 xl:bottom-10 xl:left-10"
     >
-      <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 md:mb-4 uppercase"
-      >
+      <h1 class="title font-bold mb-2 md:mb-4 uppercase">
         Unlock Your <br />
         Brand's <strong>Potential</strong>
         <br />
         with Our <strong>Unique Approach</strong>.
       </h1>
-      <p class="text-base md:text-lg xl:text-xl md:font-bold text-muted">
+      <p class="subtitle md:font-bold text-muted">
         Defined Solution Limited is a 360 agency. Helping businesses develop
         experiences and empower growth.
       </p>
@@ -86,6 +84,71 @@ const featuredCustomers = [
           </div>
         ))
       }
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section
+    class="full-card m-2 md:m-4 p-4 relative min-h-[calc(85vh-var(--spacing)*4*2)] bg-card grid grid-cols-3 lg:grid-cols-5 gap-12"
+  >
+    <div class="col-span-1 lg:col-span-2 relative max-h-[90vh]">
+      <div
+        class="h-full w-full bg-primary/15 mix-blend-overlay mb-4 rounded-lg absolute"
+      >
+      </div>
+      <img
+        src="/team-working.png"
+        alt="About Us Attachment"
+        class="w-full h-full object-cover object-center rounded-lg"
+      />
+    </div>
+    <div class="col-span-2 lg:col-span-3 space-y-4 content-center">
+      <h2 class="title font-bold mb-4 uppercase">
+        Innovation Redefined ~ <br />
+        We Bring Your <strong>Vision to Life</strong>.
+      </h2>
+      <p class="subtitle text-muted max-w-4xl">
+        We don't just build — we craft experiences that engage, convert, and
+        inspire. Backed by innovation and industry expertise, we transform
+        insights into pixel-perfect digital solutions.
+      </p>
+      <p class="subtitle text-muted max-w-4xl">
+        From apps to websites, we deliver seamless, high-impact solutions that
+        redefine user experience and solve business problems. Let's build
+        something extraordinary together!
+      </p>
+      <div
+        class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 xl:gap-10 py-3"
+      >
+        {
+          [
+            {
+              value: 50,
+              suffix: "+",
+              label: "Happy Clients",
+            },
+            {
+              value: 30,
+              suffix: "+",
+              label: "Team Members",
+            },
+            {
+              value: 65,
+              suffix: "+",
+              label: "Projects Delivered",
+            },
+          ].map((stat) => (
+            <div class="font-bold uppercase">
+              <span class="title font-bold text-primary">
+                {stat.value}
+                {stat.suffix}
+              </span>
+              <br />
+              <span class="subtitle text-muted">{stat.label}</span>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
 
