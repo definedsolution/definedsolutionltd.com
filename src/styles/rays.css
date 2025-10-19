@@ -1,6 +1,6 @@
 #rays-wrapper {
-  @apply fixed top-0 right-0 w-full h-full overflow-hidden z-50 scale-125 blur-md;
-  z-index: 9999; /* above everything else */
+  @apply fixed top-0 right-0 w-full h-full overflow-hidden scale-110 blur-xl;
+  z-index: 9999 !important; /* above everything else */
 
   /* Make its content non-selectable */
   -webkit-user-select: none; /* Safari */
@@ -23,107 +23,169 @@
   transform-origin: top right;
   -webkit-transform-origin: top right;
   /* default rotation (will be overridden by nth-child selectors) */
-  transform: rotate(18deg);
+  /* use CSS variable so animation can perturb it */
+  --r: 18deg; /* base rotation */
+  --o: 0.3; /* base opacity fallback */
+  --d: 0s; /* animation delay */
+  transform: rotate(var(--r));
+  opacity: var(--o);
+
+  /* combined subtle animations: sway (small rotation) and blink (opacity pulse) */
+  animation: ray-sway 6s cubic-bezier(0.22, 0.9, 0.35, 1) infinite alternate,
+    ray-blink 3s ease-in-out infinite;
+  animation-delay: var(--d), calc(var(--d) + 0.1s);
+}
+
+/* subtle rotation sway: +/- ~2deg */
+@keyframes ray-sway {
+  0% {
+    transform: rotate(calc(var(--r) - 2deg));
+  }
+  50% {
+    transform: rotate(calc(var(--r) + 2deg));
+  }
+  100% {
+    transform: rotate(calc(var(--r) - 1deg));
+  }
+}
+
+/* slight blink / shimmer */
+@keyframes ray-blink {
+  0% {
+    opacity: calc(var(--o) * 0.85);
+  }
+  10% {
+    opacity: calc(var(--o) * 1.05);
+  }
+  30% {
+    opacity: calc(var(--o) * 0.9);
+  }
+  60% {
+    opacity: calc(var(--o) * 1);
+  }
+  100% {
+    opacity: calc(var(--o) * 0.88);
+  }
 }
 
 /* Fan the 10 rays out from top-right. Adjust degrees to taste. */
 .ray:nth-child(1) {
-  transform: rotate(0deg);
+  --r: 0deg;
   height: 50vh;
-  opacity: 0.22;
+  --o: 0.22;
+  --d: 0s;
 }
 .ray:nth-child(2) {
-  transform: rotate(5deg);
+  --r: 5deg;
   height: 40vh;
-  opacity: 0.28;
+  --o: 0.28;
+  --d: 0.12s;
 }
 .ray:nth-child(3) {
-  transform: rotate(9deg);
+  --r: 9deg;
   height: 60vh;
-  opacity: 0.32;
+  --o: 0.32;
+  --d: 0.22s;
 }
 .ray:nth-child(4) {
-  transform: rotate(13deg);
+  --r: 13deg;
   height: 30vh;
-  opacity: 0.08;
+  --o: 0.08;
+  --d: 0.3s;
 }
 .ray:nth-child(5) {
-  transform: rotate(17deg);
+  --r: 17deg;
   height: 80vh;
-  opacity: 0.56;
+  --o: 0.56;
+  --d: 0.42s;
 }
 .ray:nth-child(6) {
-  transform: rotate(21deg);
+  --r: 21deg;
   height: 30vh;
-  opacity: 0.08;
+  --o: 0.08;
+  --d: 0.55s;
 }
 .ray:nth-child(7) {
-  transform: rotate(25deg);
+  --r: 25deg;
   height: 50vh;
-  opacity: 0.54;
+  --o: 0.54;
+  --d: 0.65s;
 }
 .ray:nth-child(8) {
-  transform: rotate(29deg);
+  --r: 29deg;
   height: 50vh;
-  opacity: 0.06;
+  --o: 0.06;
+  --d: 0.78s;
 }
 .ray:nth-child(9) {
-  transform: rotate(33deg);
+  --r: 33deg;
   height: 90vh;
-  opacity: 0.86;
+  --o: 0.86;
+  --d: 0.9s;
 }
 .ray:nth-child(10) {
-  transform: rotate(37deg);
+  --r: 37deg;
   height: 40vh;
-  opacity: 0.02;
+  --o: 0.02;
+  --d: 1.05s;
 }
 .ray:nth-child(11) {
-  transform: rotate(41deg);
+  --r: 41deg;
   height: 50vh;
-  opacity: 0.48;
+  --o: 0.48;
+  --d: 1.2s;
 }
 .ray:nth-child(12) {
-  transform: rotate(45deg);
+  --r: 45deg;
   height: 120vh;
-  opacity: 0.76;
+  --o: 0.76;
+  --d: 1.35s;
 }
 .ray:nth-child(13) {
-  transform: rotate(49deg);
+  --r: 49deg;
   height: 20vh;
-  opacity: 0.7;
+  --o: 0.7;
+  --d: 1.5s;
 }
 .ray:nth-child(14) {
-  transform: rotate(53deg);
+  --r: 53deg;
   height: 40vh;
-  opacity: 0.12;
+  --o: 0.12;
+  --d: 1.6s;
 }
 .ray:nth-child(15) {
-  transform: rotate(57deg);
+  --r: 57deg;
   height: 90vh;
-  opacity: 0.76;
+  --o: 0.76;
+  --d: 1.75s;
 }
 .ray:nth-child(16) {
-  transform: rotate(61deg);
+  --r: 61deg;
   height: 45vh;
-  opacity: 0.56;
+  --o: 0.56;
+  --d: 1.9s;
 }
 .ray:nth-child(17) {
-  transform: rotate(65deg);
+  --r: 65deg;
   height: 70vh;
-  opacity: 0.94;
+  --o: 0.94;
+  --d: 2.05s;
 }
 .ray:nth-child(18) {
-  transform: rotate(70deg);
+  --r: 70deg;
   height: 40vh;
-  opacity: 0.46;
+  --o: 0.46;
+  --d: 2.2s;
 }
 .ray:nth-child(19) {
-  transform: rotate(75deg);
+  --r: 75deg;
   height: 79vh;
-  opacity: 0.88;
+  --o: 0.88;
+  --d: 2.4s;
 }
 .ray:nth-child(20) {
-  transform: rotate(90deg);
+  --r: 90deg;
   height: 80vh;
-  opacity: 0.3;
+  --o: 0.3;
+  --d: 2.6s;
 }
