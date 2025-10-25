@@ -53,7 +53,7 @@ const featuredCustomers = [
     <div
       class="absolute bottom-4 left-4 md:bottom-5 md:left-5 xl:bottom-10 xl:left-10 max-w-[calc(100vw-var(--spacing)*10*2)]"
     >
-      <h1 class="title font-bold mb-2 md:mb-4 uppercase">
+      <h1 class="hero-title font-bold mb-2 md:mb-4 uppercase">
         Unlock Your <br />
         Brand's <strong>Potential</strong>
         <br />
@@ -66,7 +66,7 @@ const featuredCustomers = [
     </div>
   </Hero>
   <!-- Featured Customers Section -->
-  <section class="p-4 px-16 flex flex-row items-center justify-between gap-10">
+  <section class="p-2 px-16 flex flex-row items-center justify-between gap-10">
     <h2 class="text-lg font-bold min-w-fit">
       <strong class="text-5xl">50+</strong>
       <br />
@@ -103,7 +103,7 @@ const featuredCustomers = [
       />
     </div>
     <div
-      class="col-span-1 md:col-span-2 lg:col-span-3 space-y-4 content-center"
+      class="col-span-1 md:pt-44 md:col-span-2 lg:col-span-3 space-y-4 content-center"
     >
       <h2 class="title font-bold mb-4 uppercase">
         Innovation Redefined ~ <br />
@@ -125,19 +125,14 @@ const featuredCustomers = [
         {
           [
             {
-              value: 50,
+              value: 65,
               suffix: "+",
-              label: "Happy Clients",
+              label: "Projects Delivered",
             },
             {
               value: 30,
               suffix: "+",
               label: "Team Members",
-            },
-            {
-              value: 65,
-              suffix: "+",
-              label: "Projects Delivered",
             },
           ].map((stat) => (
             <div class="font-bold uppercase">
@@ -153,6 +148,24 @@ const featuredCustomers = [
       </div>
     </div>
   </section>
+
+  <!-- Words From CTO Section -->
+   <section class="relative min-h-[50vh] flex flex-col items-center justify-center p-4">
+    <div class="flex flex-row items-start gap-4 justify-center py-20">
+      <p class="text-2xl md:text-5xl text-primary">"</p>
+      <p class="text-xl md:text-3xl font-semibold text-center uppercase">
+        We provide creative solutions <br />
+        for your creative ideas.
+      </p>
+      <p class="text-2xl md:text-5xl text-primary">"</p>
+    </div>
+    <div class="text-center mt-20">
+      <img src="/sign.svg" />
+      <h3 class="font-bold text-lg md:text-2xl mt-7">Ibrahim Sadik Tamim</h3>
+      <p class="text-muted">CTO, Defined Solution</p>
+    </div>
+    <img src="/logo.svg" class="absolute opacity-5 -z-10 top-1/2 left-1/2 -translate-1/2 h-70 w-70" />
+   </section>
 
   <div class="h-[70vh]"></div>
 </MainLayout>
