@@ -1,6 +1,7 @@
 ---
 import Hero from "@/_components/hero.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
+import { Icon } from "astro-icon/components";
 
 const featuredCustomers = [
   {
@@ -224,8 +225,8 @@ const featuredCustomers = [
               <h3 class="font-bold whitespace-pre-wrap text-4xl uppercase ">
                 {service.title}
               </h3>
-              <button class="text-primary text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square p-4">
-                :o
+              <button class="text-primary text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square p-3">
+                <Icon name={"lucide:arrow-up-right"} />
               </button>
             </div>
           </a>
