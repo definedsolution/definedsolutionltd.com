@@ -150,7 +150,9 @@ const featuredCustomers = [
   </section>
 
   <!-- Words From CTO Section -->
-   <section class="relative min-h-[50vh] flex flex-col items-center justify-center p-4">
+  <section
+    class="relative min-h-[50vh] flex flex-col items-center justify-center p-4"
+  >
     <div class="flex flex-row items-start gap-4 justify-center py-20">
       <p class="text-2xl md:text-5xl text-primary">"</p>
       <p class="text-xl md:text-3xl font-semibold text-center uppercase">
@@ -161,11 +163,79 @@ const featuredCustomers = [
     </div>
     <div class="text-center mt-20">
       <img src="/sign.svg" />
-      <h3 class="font-bold text-lg md:text-2xl mt-7">Ibrahim Sadik Tamim</h3>
-      <p class="text-muted">CTO, Defined Solution</p>
+      <h3 class="font-bold text-lg md:text-2xl mt-7">Ahmad Sayeef Khan</h3>
+      <p class="text-muted">CEO, Defined Solution</p>
     </div>
-    <img src="/logo.svg" class="absolute opacity-5 -z-10 top-1/2 left-1/2 -translate-1/2 h-70 w-70" />
-   </section>
+    <img
+      src="/logo.svg"
+      class="absolute opacity-5 -z-10 top-1/2 left-1/2 -translate-1/2 h-70 w-70"
+    />
+  </section>
+
+  <!-- Our Services -->
+  <section class="flex flex-col p-4 mt-20">
+    <div class="flex flex-col md:flex-row items-start gap-10 justify-between px-10">
+      <h2 class="uppercase font-bold title">
+        Our <strong>Exclusive</strong><br />
+        Digital <strong>Services</strong>
+      </h2>
+      <div class="max-w-4xl space-y-8">
+        <p class="subtitle">
+          Whether it's crafting a visually stunning brand identity, designing
+          immersive digital experiences, or developing strategic enterprise
+          software, we deliver it with passion.
+        </p>
+        <a href="#" class="subtitle underline text-primary underline-offset-4">
+          <strong>Have any idea? Get a Quote</strong>
+          </a>
+      </div>
+    </div>
+
+    <!-- Service Cards -->
+     <div class="grid grid-cols-1 mt-20 md:grid-cols-3 items-stretch gap-4">
+       {
+        [
+          {
+            title: "Branding &\n Digital Marketing",
+            slug: "branding-digital-marketing",
+            image: "/services/branding-marketing.png",
+          },
+          {
+            title: "Web Design\n & Development",
+            slug: "web-design-development",
+            image: "/services/branding-marketing.png",
+          },
+          {
+            title: "Software Design\n & Development",
+            slug: "software-design-development",
+            image: "/services/branding-marketing.png",
+          },
+        ].map((service) => (
+          <a
+            href={`/services/${service.slug}`}
+            class="relative group overflow-hidden min-h-96 aspect-5/6 rounded-xl bg-card base-card hover:border-primary/90"
+          >            
+              <img
+                src={service.image}
+                alt={service.title}
+                class="w-4/5 h-auto absolute object-cover scale-125 group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
+              />
+            <div class="p-6 flex-grow flex flex-row items-start justify-between">
+              <h3 class="font-bold whitespace-pre-wrap text-4xl uppercase ">
+                {service.title}
+              </h3>
+              <button class="text-primary text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square p-4">
+                :o
+              </button>
+            </div>
+          </a>
+        ))
+       }
+     </div>
+    <div>
+
+    </div>
+  </section>
 
   <div class="h-[70vh]"></div>
 </MainLayout>
