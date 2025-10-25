@@ -175,7 +175,7 @@ const featuredCustomers = [
 
   <!-- Our Services -->
   <section class="flex flex-col m-2 mt-20">
-    <div class="flex flex-col md:flex-row items-start gap-10 justify-between px-10">
+    <div class="flex flex-col md:flex-row items-start gap-8 justify-between px-10">
       <h2 class="uppercase font-bold title">
         Our <strong>Exclusive</strong><br />
         Digital <strong>Services</strong>
@@ -213,16 +213,16 @@ const featuredCustomers = [
           },
         ].map((service) => (
           <a
-            href={`/services/${service.slug}`}
+            href={`#`}
             class="relative group overflow-hidden min-h-96 aspect-5/6 rounded-xl bg-card base-card hover:border-primary/90"
           >            
               <img
                 src={service.image}
-                alt={service.title}
+                alt={service.slug}
                 class="w-4/5 h-auto absolute object-cover scale-125 group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
               />
-            <div class="p-6 flex-grow flex flex-row items-start justify-between">
-              <h3 class="font-bold whitespace-pre-wrap title uppercase ">
+            <div class="p-0 md:p-6 flex-grow flex flex-row items-start justify-between">
+              <h3 class="font-bold leading-none whitespace-pre-wrap title uppercase ">
                 {service.title}
               </h3>
               <button class="text-primary text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square p-3">
