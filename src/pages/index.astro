@@ -67,16 +67,16 @@ const featuredCustomers = [
     </div>
   </Hero>
   <!-- Featured Customers Section -->
-  <section class="p-2 px-16 flex flex-row items-center justify-between gap-10">
+  <section class="p-2 px-4 md:px-16 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-10">
     <h2 class="text-lg font-bold min-w-fit">
-      <strong class="text-5xl">50+</strong>
+      <strong class="title">50+</strong>
       <br />
-      <span class="uppercase">Happy Customers World-wide</span>
+      <span class="uppercase subtitle">Happy Customers World-wide</span>
     </h2>
-    <div class="flex flex-row gap-4">
+    <div class="flex flex-row gap-4 max-w-svw overflow-x-hidden">
       {
         featuredCustomers.map((customer) => (
-          <div class="h-24">
+          <div class="h-16 md:h-24 aspect-square">
             <img
               src={customer.logo}
               alt={customer.name}
