@@ -14,6 +14,7 @@ export default defineConfig({
       include: {
         lucide: ["*"],
         "vscode-icons": ["*"],
+        guidance: ["up-arrow"],
       },
     }),
   ],
