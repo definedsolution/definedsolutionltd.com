@@ -176,7 +176,7 @@ const featuredCustomers = [
     />
   </section>
 
-  <!-- Our Services -->
+  <!-- Our Services
   <section class="flex flex-col m-2 mt-20">
     <div
       class="flex flex-col md:flex-row items-start gap-8 justify-between px-10"
@@ -195,164 +195,163 @@ const featuredCustomers = [
           <strong>Have any idea? Get a Quote</strong>
         </a>
       </div>
+    </div> -->
+
+  <!-- Service Cards -->
+  <Services />
+
+  <!-- Case Studies -->
+  <section class="flex flex-col m-2 mt-20">
+    <div class="flex flex-col items-start gap-8 justify-between px-10">
+      <h2 class="uppercase font-bold title">
+        Few <strong>Case Studies</strong> & <br />
+        FEATURED <strong>WORKS</strong>
+      </h2>
+      <div class="space-y-8 md:max-w-[50%]">
+        <p class="subtitle">
+          Whether it's crafting a visually stunning brand identity, designing
+          immersive digital experiences, or developing strategic enterprise
+          software, we deliver it with passion.
+        </p>
+      </div>
     </div>
 
-    <!-- Service Cards -->
-    <Services />
-
-    <!-- Case Studies -->
-    <section class="flex flex-col m-2 mt-20">
-      <div class="flex flex-col items-start gap-8 justify-between px-10">
-        <h2 class="uppercase font-bold title">
-          Few <strong>Case Studies</strong> & <br />
-          FEATURED <strong>WORKS</strong>
-        </h2>
-        <div class="space-y-8 md:max-w-[50%]">
-          <p class="subtitle">
-            Whether it's crafting a visually stunning brand identity, designing
-            immersive digital experiences, or developing strategic enterprise
-            software, we deliver it with passion.
-          </p>
-        </div>
-      </div>
-
-      <!-- Case Study Cards -->
-      <div class="grid grid-cols-1 mt-20 gap-4">
-        {
-          [
-            {
-              title: "BRANDING OF\n DEFINED SOLUTION LIMITED",
-              slug: "branding-of-defined-solution-limited",
-              image: "/casestudies/ds-case-study.png",
-              tags: ["Branding", "Digital Marketing"],
-            },
-            {
-              title: "UI CASE STUDY OF\n SULTANS DINE",
-              slug: "ui-case-study-of-sultans-dine",
-              image: "/casestudies/sultans-dine-case-study.png",
-              tags: ["UI/UX", "App Development"],
-            },
-          ].map((caseStudy) => (
-            <a
-              href={`#`}
-              class="relative group overflow-hidden min-h-96 rounded-xl bg-card base-card hover:border-primary/90"
-            >
-              <img
-                src={caseStudy.image}
-                alt={caseStudy.slug}
-                class="w-3/5 h-auto absolute object-cover group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
-              />
-              <div>
-                <div class="p-4 flex-grow flex flex-row items-start justify-between  absolute bottom-0 w-full">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="font-bold leading-none whitespace-pre-wrap title uppercase text-white">
-                      {caseStudy.title}
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                      {caseStudy.tags.map((tag) => (
-                        <span class="text-sm font-bold px-3 py-1 border-2 border-primary text-primary rounded-full ">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+    <!-- Case Study Cards -->
+    <div class="grid grid-cols-1 mt-20 gap-4">
+      {
+        [
+          {
+            title: "BRANDING OF\n DEFINED SOLUTION LIMITED",
+            slug: "branding-of-defined-solution-limited",
+            image: "/casestudies/ds-case-study.png",
+            tags: ["Branding", "Digital Marketing"],
+          },
+          {
+            title: "UI CASE STUDY OF\n SULTANS DINE",
+            slug: "ui-case-study-of-sultans-dine",
+            image: "/casestudies/sultans-dine-case-study.png",
+            tags: ["UI/UX", "App Development"],
+          },
+        ].map((caseStudy) => (
+          <a
+            href={`#`}
+            class="relative group overflow-hidden min-h-96 rounded-xl bg-card base-card hover:border-primary/90"
+          >
+            <img
+              src={caseStudy.image}
+              alt={caseStudy.slug}
+              class="w-3/5 h-auto absolute object-cover group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
+            />
+            <div>
+              <div class="p-4 flex-grow flex flex-row items-start justify-between  absolute bottom-0 w-full">
+                <div class="flex flex-col gap-4">
+                  <h3 class="font-bold leading-none whitespace-pre-wrap title uppercase text-white">
+                    {caseStudy.title}
+                  </h3>
+                  <div class="flex flex-wrap gap-2">
+                    {caseStudy.tags.map((tag) => (
+                      <span class="text-sm font-bold px-3 py-1 border-2 border-primary text-primary rounded-full ">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
-
-                <button class="p-4 text-primary absolute top-0 right-0 text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square">
-                  <Icon name={"lucide:arrow-up-right"} />
-                </button>
               </div>
-            </a>
-          ))
-        }
-      </div>
-    </section>
 
-    <!-- QnA Section -->
-    <section
-      class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 m-2 mt-20"
-    >
-      <div class="flex flex-col gap-2 relative overflow-hidden">
-        <img
-          src={"/asterisk.svg"}
-          alt={"Asterisk Icon"}
-          class="w-30 md:w-40 h-auto absolute object-cover group-hover:scale-150 -right-12 -bottom-12"
-        />
-        <h1 class="uppercase font-bold title">
-          Have <strong>Questions</strong>?
-        </h1>
-        <div
-          class="min-h-40 p-4 flex flex-col items-start justify-between bg-card bg-base"
-        >
-          <p class="subtitle">Find the right solution<br /> for you now</p>
-          <button class="px-4 btn-primary">Book A Quick Call</button>
-        </div>
-      </div>
-      <div class="md:w-2/4">
-        {
-          [
-            {
-              question: "What are your focus area as 360 Digital Agency?",
-              answer:
-                "User experience is in our bloodline as a global design agency. We create design solutions that are easily interactable, visually pleasing, and intuitively user-friendly. Your digital products, like websites, apps, and enterprise software, need user acceptance, interaction, and user experience. Focusing on that, we craft solutions for our clients like you.As a global UX/UI design agency, we offer a range of design solutions. It covers websites, web and mobile apps, enterprise software, AR/VR interfaces, brand identity, and front-end web design. With in this journey of progression, we have set footsteps in industries like SAAS, healthcare, enterprise software, B2B, and education software on the global horizon. Ultimately, we craft highly engaging solutions.",
-            },
-            {
-              question:
-                "What sets Defined Solution Limited apart from other agencies?",
-              answer:
-                "You can get a quote by contacting us through our website or booking a quick call with our team.",
-            },
-            {
-              question: "What services do you offer for start-ups?",
-              answer:
-                "You can get a quote by contacting us through our website or booking a quick call with our team.",
-            },
-            {
-              question: "Can you help us develop out app?",
-              answer:
-                "You can get a quote by contacting us through our website or booking a quick call with our team.",
-            },
-            {
-              question: "How do you estimate your development time?",
-              answer:
-                "You can get a quote by contacting us through our website or booking a quick call with our team.",
-            },
-            {
-              question: "WHow much does an app cost?",
-              answer:
-                "You can get a quote by contacting us through our website or booking a quick call with our team.",
-            },
-          ].map((qa) => (
-            <div data-accordion-item class="border-b border-gray-800">
-              <button
-                data-accordion-header
-                class="flex justify-between items-center w-full py-5 text-left"
-              >
-                <span class="text-lg font-semibold text-primary">
-                  {qa.question}
-                </span>
-                <div class="bg-primary/30 p-2 rounded-full">
-                  <Icon
-                    name="guidance:up-arrow"
-                    data-arrow-icon
-                    class="w-6 h-6 text-primary transition-transform duration-300"
-                  />
-                </div>
+              <button class="p-4 text-primary absolute top-0 right-0 text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square">
+                <Icon name={"lucide:arrow-up-right"} />
               </button>
-              <div
-                data-accordion-content
-                class="overflow-hidden transition-all duration-500 ease-in-out"
-              >
-                <div class="text-sm text-muted mb-5  space-y-4">
-                  <p>{qa.answer}</p>
-                </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- QnA Section -->
+  <section
+    class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 m-2 mt-20"
+  >
+    <div class="flex flex-col gap-2 relative overflow-hidden">
+      <img
+        src={"/asterisk.svg"}
+        alt={"Asterisk Icon"}
+        class="w-30 md:w-40 h-auto absolute object-cover group-hover:scale-150 -right-12 -bottom-12"
+      />
+      <h1 class="uppercase font-bold title">
+        Have <strong>Questions</strong>?
+      </h1>
+      <div
+        class="min-h-40 p-4 flex flex-col items-start justify-between bg-card bg-base"
+      >
+        <p class="subtitle">Find the right solution<br /> for you now</p>
+        <button class="px-4 btn-primary">Book A Quick Call</button>
+      </div>
+    </div>
+    <div class="md:w-2/4">
+      {
+        [
+          {
+            question: "What are your focus area as 360 Digital Agency?",
+            answer:
+              "User experience is in our bloodline as a global design agency. We create design solutions that are easily interactable, visually pleasing, and intuitively user-friendly. Your digital products, like websites, apps, and enterprise software, need user acceptance, interaction, and user experience. Focusing on that, we craft solutions for our clients like you.As a global UX/UI design agency, we offer a range of design solutions. It covers websites, web and mobile apps, enterprise software, AR/VR interfaces, brand identity, and front-end web design. With in this journey of progression, we have set footsteps in industries like SAAS, healthcare, enterprise software, B2B, and education software on the global horizon. Ultimately, we craft highly engaging solutions.",
+          },
+          {
+            question:
+              "What sets Defined Solution Limited apart from other agencies?",
+            answer:
+              "You can get a quote by contacting us through our website or booking a quick call with our team.",
+          },
+          {
+            question: "What services do you offer for start-ups?",
+            answer:
+              "You can get a quote by contacting us through our website or booking a quick call with our team.",
+          },
+          {
+            question: "Can you help us develop out app?",
+            answer:
+              "You can get a quote by contacting us through our website or booking a quick call with our team.",
+          },
+          {
+            question: "How do you estimate your development time?",
+            answer:
+              "You can get a quote by contacting us through our website or booking a quick call with our team.",
+          },
+          {
+            question: "WHow much does an app cost?",
+            answer:
+              "You can get a quote by contacting us through our website or booking a quick call with our team.",
+          },
+        ].map((qa) => (
+          <div data-accordion-item class="border-b border-gray-800">
+            <button
+              data-accordion-header
+              class="flex justify-between items-center w-full py-5 text-left"
+            >
+              <span class="text-lg font-semibold text-primary">
+                {qa.question}
+              </span>
+              <div class="bg-primary/30 p-2 rounded-full">
+                <Icon
+                  name="guidance:up-arrow"
+                  data-arrow-icon
+                  class="w-6 h-6 text-primary transition-transform duration-300"
+                />
+              </div>
+            </button>
+            <div
+              data-accordion-content
+              class="overflow-hidden transition-all duration-500 ease-in-out"
+            >
+              <div class="text-sm text-muted mb-5  space-y-4">
+                <p>{qa.answer}</p>
               </div>
             </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <div class="h-[70vh]"></div>
+          </div>
+        ))
+      }
+    </div>
   </section>
+
+  <div class="h-[70vh]"></div>
 </MainLayout>

@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 
 const services = await getCollection("services");
+
 ---
 
 {
@@ -30,14 +31,14 @@ const services = await getCollection("services");
     <!-- Service Cards -->
     <div class="grid grid-cols-1 mt-20 md:grid-cols-3 items-stretch gap-4">
       {
-        services.map(({data:{title,slug, image}}) => (
+        services.sort((a, b) => a.data.index - b.data.index).map(({id, data:{title, image}}) => (
           <a
-            href={`/services/${slug}`}
+            href={`/services/${id}`}
             class="relative group overflow-hidden min-h-96 aspect-5/6 rounded-xl bg-card base-card hover:border-primary/90"
           >
             <img
               src={image}
-              alt={slug}
+              alt={id}
               class="w-4/5 h-auto absolute object-cover scale-125 group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
             />
             <div class="p-0 md:p-6 flex-grow flex flex-row items-start justify-between">

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer theme;
+
+@import "./theme.css" layer(theme);
+
+@layer markdown {
+  #markdown-content {
+    h3 {
+      @apply text-2xl font-bold text-primary leading-loose;
+    }
+  }
+}

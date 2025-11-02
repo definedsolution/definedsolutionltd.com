@@ -1,0 +1,17 @@
+---
+import MainLayout from "./MainLayout.astro";
+import "@/styles/markdown.css";
+
+const {
+  frontmatter: { title, image, description },
+} = Astro.props;
+---
+
+<MainLayout>
+  <img src={image} alt={title} />
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <article id="markdown-content">
+    <slot />
+  </article>
+</MainLayout>
