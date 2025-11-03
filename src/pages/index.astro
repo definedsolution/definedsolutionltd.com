@@ -62,8 +62,8 @@ const featuredCustomers = [
         with Our <strong>Unique Approach</strong>.
       </h1>
       <p class="subtitle md:font-bold text-muted">
-        Defined Solution Limited is a 360 agency. Helping businesses develop
-        experiences and empower growth.
+        Defined Solution is a 360 agency. Helping businesses develop experiences
+        and empower growth.
       </p>
     </div>
   </Hero>
@@ -168,7 +168,7 @@ const featuredCustomers = [
     <div class="text-center mt-20">
       <img src="/sign.svg" />
       <h3 class="font-bold text-lg md:text-2xl mt-7">Ahmad Sayeef Khan</h3>
-      <p class="text-muted">CEO, Defined Solution</p>
+      <p class="text-muted">Proprietor, Defined Solution</p>
     </div>
     <img
       src="/logo.svg"
@@ -217,40 +217,59 @@ const featuredCustomers = [
     </div>
 
     <!-- Case Study Cards -->
-    <div class="grid grid-cols-1 mt-20 gap-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 mt-20 gap-4">
       {
         [
           {
-            title: "BRANDING OF\n DEFINED SOLUTION LIMITED",
-            slug: "branding-of-defined-solution-limited",
-            image: "/casestudies/ds-case-study.png",
-            tags: ["Branding", "Digital Marketing"],
+            title: "Employee Mart For\n Grade Bangladesh",
+            slug: "employee-mart-for-grade-bangladesh",
+            image: "/works/gradebd-screenshot-mockup.png",
+            tags: ["Software Development", "UI/UX"],
           },
           {
-            title: "UI CASE STUDY OF\n SULTANS DINE",
-            slug: "ui-case-study-of-sultans-dine",
-            image: "/casestudies/sultans-dine-case-study.png",
-            tags: ["UI/UX", "App Development"],
+            title: "POS SYSTEM FOR\n FASCINO BANGLADESH",
+            slug: "pos-system-for-fascino-bangladesh",
+            image: "/works/pos-app-ui-mockup.png",
+            tags: ["Software Development", "UI/UX"],
+          },
+          {
+            title: "CRM APPLICATION FOR\n REAL ESTATE AGENCY",
+            slug: "crm-application-for-real-estate-agency",
+            image: "/works/crm-mockup.png",
+            tags: ["Software Development", "UI/UX"],
+          },
+          {
+            title: "E-COMMERCE WEBSITE\n FOR RAYOS BANGLADESH",
+            slug: "e-commerce-website-for-rayos-bangladesh",
+            image: "/works/rayos-screenshot-mockup.png",
+            tags: ["Web Development", "UI/UX"],
+          },
+          {
+            title: "E-Learning Platform\n FOR EDUTECH STARTUP",
+            slug: "e-learning-platform-for-edutech-startup",
+            image: "/works/admique-case-study-mockup.png",
+            tags: ["Case Study", "UI/UX"],
           },
         ].map((caseStudy) => (
           <a
             href={`#`}
-            class="relative group overflow-hidden min-h-96 rounded-xl bg-card base-card hover:border-primary/90"
+            class="relative group overflow-hidden rounded-xl bg-card base-card flex flex-col justify-between hover:border-primary/90 gap-2"
           >
+            {/* class="w-3/5 h-auto absolute object-cover group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform" */}
             <img
               src={caseStudy.image}
               alt={caseStudy.slug}
-              class="w-3/5 h-auto absolute object-cover group-hover:scale-150 right-0 -bottom-10 opacity-70 transition-transform"
+              class="w-full object-cover rounded transition-transform"
             />
             <div>
-              <div class="p-4 flex-grow flex flex-row items-start justify-between  absolute bottom-0 w-full">
+              <div class="lg:p-4 flex-grow flex flex-row items-start justify-between bottom-0 w-full">
                 <div class="flex flex-col gap-4">
                   <h3 class="font-bold leading-none whitespace-pre-wrap title uppercase text-white">
                     {caseStudy.title}
                   </h3>
                   <div class="flex flex-wrap gap-2">
                     {caseStudy.tags.map((tag) => (
-                      <span class="text-sm font-bold px-3 py-1 border-2 border-primary text-primary rounded-full ">
+                      <span class="text-md font-bold px-3 py-1 border-2 border-primary text-primary rounded-full bg-primary/5 ">
                         {tag}
                       </span>
                     ))}
@@ -258,7 +277,7 @@ const featuredCustomers = [
                 </div>
               </div>
 
-              <button class="p-4 text-primary absolute top-0 right-0 text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square">
+              <button class="p-4 text-primary absolute top-0 right-0 text-4xl scale-0 group-hover:scale-100 transition-transform bg-primary/10 rounded-full duration-300 !aspect-square hidden">
                 <Icon name={"lucide:arrow-up-right"} />
               </button>
             </div>
@@ -270,13 +289,13 @@ const featuredCustomers = [
 
   <!-- QnA Section -->
   <section
-    class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 m-2 mt-20"
+    class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 m-4 md:m-6 !mt-20"
   >
-    <div class="flex flex-col gap-2 relative overflow-hidden">
+    <div class="flex flex-col pt-5 gap-2 relative overflow-hidden">
       <img
         src={"/asterisk.svg"}
         alt={"Asterisk Icon"}
-        class="w-30 md:w-40 h-auto absolute object-cover group-hover:scale-150 -right-12 -bottom-12"
+        class="w-30 md:w-40 h-auto absolute object-cover group-hover:scale-150 invert mix-blend-soft-light opacity-50 -right-12 -bottom-12"
       />
       <h1 class="uppercase font-bold title">
         Have <strong>Questions</strong>?
@@ -288,7 +307,7 @@ const featuredCustomers = [
         <button class="px-4 btn-primary">Book A Quick Call</button>
       </div>
     </div>
-    <div class="md:w-2/4">
+    <div class="flex-1">
       {
         [
           {
@@ -297,8 +316,7 @@ const featuredCustomers = [
               "User experience is in our bloodline as a global design agency. We create design solutions that are easily interactable, visually pleasing, and intuitively user-friendly. Your digital products, like websites, apps, and enterprise software, need user acceptance, interaction, and user experience. Focusing on that, we craft solutions for our clients like you.As a global UX/UI design agency, we offer a range of design solutions. It covers websites, web and mobile apps, enterprise software, AR/VR interfaces, brand identity, and front-end web design. With in this journey of progression, we have set footsteps in industries like SAAS, healthcare, enterprise software, B2B, and education software on the global horizon. Ultimately, we craft highly engaging solutions.",
           },
           {
-            question:
-              "What sets Defined Solution Limited apart from other agencies?",
+            question: "What sets Defined Solution apart from other agencies?",
             answer:
               "You can get a quote by contacting us through our website or booking a quick call with our team.",
           },
@@ -318,24 +336,27 @@ const featuredCustomers = [
               "You can get a quote by contacting us through our website or booking a quick call with our team.",
           },
           {
-            question: "WHow much does an app cost?",
+            question: "How much does an app cost?",
             answer:
               "You can get a quote by contacting us through our website or booking a quick call with our team.",
           },
         ].map((qa) => (
-          <div data-accordion-item class="border-b border-gray-800">
+          <div
+            data-accordion-item
+            class={`border-b border-gray-800 last:border-0`}
+          >
             <button
               data-accordion-header
               class="flex justify-between items-center w-full py-5 text-left"
             >
-              <span class="text-lg font-semibold text-primary">
+              <span class="subtitle font-semibold text-primary">
                 {qa.question}
               </span>
-              <div class="bg-primary/30 p-2 rounded-full">
+              <div class="bg-primary/30 p-2 rounded-full rotate-180">
                 <Icon
                   name="guidance:up-arrow"
                   data-arrow-icon
-                  class="w-6 h-6 text-primary transition-transform duration-300"
+                  class="w-6 h-6 text-primary transition-transform duration-300 rotate-180"
                 />
               </div>
             </button>
@@ -343,7 +364,7 @@ const featuredCustomers = [
               data-accordion-content
               class="overflow-hidden transition-all duration-500 ease-in-out"
             >
-              <div class="text-sm text-muted mb-5  space-y-4">
+              <div class="text-muted mb-5  space-y-4">
                 <p>{qa.answer}</p>
               </div>
             </div>
@@ -353,5 +374,5 @@ const featuredCustomers = [
     </div>
   </section>
 
-  <div class="h-[70vh]"></div>
+  <!-- <div class="h-[70vh]"></div> -->
 </MainLayout>

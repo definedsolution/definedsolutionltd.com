@@ -6,8 +6,8 @@ import Footer from "@/_components/footer.astro";
 import Rays from "@/_components/rays.astro";
 
 const {
-  title = "Defined Solution Limited",
-  description = "Defined Solution Limited is a software development company specializing in web and mobile applications.",
+  title = "Defined Solution",
+  description = "Defined Solution is a software development company specializing in web and mobile applications.",
 } = Astro.props;
 ---
 
@@ -29,6 +29,9 @@ const {
     </section>
     <!-- Smooth Scroll Wrapper -->
     <div id="smooth-scroll-content" class="min-h-screen">
+      <section class="hidden md:block text-center bg-primary/5 p-2">
+        this website is in maintenance! sorry for the inconvenience.
+      </section>
       <slot />
       <Footer />
     </div>

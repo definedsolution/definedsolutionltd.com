@@ -1,6 +1,6 @@
-# Defined Solution Limited
+# Defined Solution
 
-This repository contains the official website and related resources for Defined Solution Limited. Our mission is to provide innovative solutions and services to help businesses thrive in the digital age.
+This repository contains the official website and related resources for Defined Solution. Our mission is to provide innovative solutions and services to help businesses thrive in the digital age.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ This repository contains the official website and related resources for Defined 
 
 ## Installation
 
-To get started with the Defined Solution Limited website, follow these steps:
+To get started with the Defined Solution website, follow these steps:
 
 1. Clone the repository:
 
